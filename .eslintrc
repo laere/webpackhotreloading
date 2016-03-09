@@ -1,0 +1,30 @@
+{
+  "env" : {
+      "node" : true
+    },
+  "ecmaFeatures" : {
+      "arrowFunctions" : true,
+      "blockBindings" : true,
+      "generators" : true,
+      "classes" : true,
+      "objectLiteralShorthandMethods" : true,
+      "jsx" : true,
+      "defaultParams" : true,
+      "modules" : true,
+      "objectLiteralComputedProperties" : true,
+      "spread" : true,
+      "restParams" : true,
+      "objectLiteralShorthandProperties" : true,
+      "templateStrings" : true
+    },
+    "rules": {
+        "semi": [2, "always"],
+        "quotes": [2, "single"],
+        "eqeqeq" : [2, "smart"],
+        "comma-dangle" : [2, "never"],
+        "no-extra-semi" : 2,
+        "no-extra-boolean-cast" : 2,
+        "no-func-assign" : 2,
+        "no-unreachable" : 2
+    }
+}
