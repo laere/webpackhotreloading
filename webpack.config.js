@@ -8,16 +8,20 @@ module.exports = {
     'webpack-dev-server/client?http://localhost:8080',
     path.resolve(__dirname, 'src/index.js')
   ],
+
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: "bundle.js",
   },
+
   modulesDirectories: [
     'node_modules'
   ],
+
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
+
   module: {
     loaders: [{
       test: /\.js$/,
@@ -34,4 +38,5 @@ module.exports = {
       loader: 'style!css!sass'
     }]
   }
+  
 };
