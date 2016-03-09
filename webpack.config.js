@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 
 module.exports = {
 
@@ -9,15 +10,15 @@ module.exports = {
     filename: "bundle.js",
     publicPath: "/"
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
-      loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ['babel'],
-        include: __dirname
-      }
-    ]
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loaders: ['babel'],
+      include: __dirname
+    }]
   }
-
-}
+};
