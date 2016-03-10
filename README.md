@@ -1,4 +1,4 @@
-<h1>Simple starter template with Hot Reloading</h1>
+<h1>Simple React/Redux starter template with Hot Reloading</h1>
 
 This is a basic webpack with hot reloading template. **It also has redux-thunk, redu-xpromise middleware, react-router/react-redux-router/redux built into the store** and ready to go!
 
