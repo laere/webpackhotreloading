@@ -11,8 +11,13 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 // CONTAINERS
 import App from './components/app';
+//  STATE
+
 // Store with middleware.
-const createStoreWithMiddleware = applyMiddleware(Thunk, Promise)(createStore);
+const createStoreWithMiddleware = compose(
+  applyMiddleware(Thunk, Promise),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+)(createStore);
 // Store with middleware and reducers
 const State = combineReducers({
   routing: routerReducer
@@ -25,6 +30,6 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />,
-  </Provider>
+    <App />
+  </Provider>,
   document.querySelector('#container'));
