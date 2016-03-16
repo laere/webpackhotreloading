@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 //  STORE
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 // MIDDLEWARE
 import Thunk from 'redux-thunk';
 import Promise from 'redux-promise';
@@ -10,7 +10,7 @@ import Promise from 'redux-promise';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 // CONTAINERS
-import App from './components/app';
+import App from './app/app';
 //  STATE
 
 // Store with middleware.
